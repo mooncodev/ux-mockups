@@ -1,0 +1,18 @@
+---
+title: Flow
+slug: events-calendar
+category: calendar
+theme: blue
+---
+{% extends "./layouts/default.html" %}
+
+{% block head %}
+<link type="text/css" href="assets/css/themes/{{ theme or 'default' }}/vendor-fullcalendar.css" rel="stylesheet">
+{% endblock %}
+
+{% block scripts %}
+  {% include 'partials/modal.edit-event.html' %}
+  <script src="assets/vendor/fullcalendar.min.js"></script>
+  <script src="assets/vendor/jquery-ui.min.js"></script>
+  <script src="assets/js/drag_drop_events.js"></script>
+{% endblock %}

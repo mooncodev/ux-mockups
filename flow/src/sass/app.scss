@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+
+@import "bootstrap/scss/functions";
+@import "bootstrap-color-yiq";
+
+@import "variables"; // APP VARIABLES
+
+@import "bootstrap-core"; // BS
+@import "bootstrap-dependencies"; // BS
+
+// MDK
+@import 'material-design-kit/src/style';
+
+@import "@material/switch/mdc-switch";
+@import "@material/snackbar/mdc-snackbar";
+
+@import "select2/src/scss/core";
+@import "select2-vars";
+@import "select2-bootstrap-theme/src/select2-bootstrap.scss";
+@import "select2-after";
+
+// CUSTOM SASS
+@import 'activity-timeline';
+@import 'helper';
+
+// Material Icons
+@import 'material-icons';
+
+@import 'badge';
+@import 'button';
+@import 'form';
+@import 'footer';
+@import 'calendar';
+@import 'card';
+@import 'email';
+@import 'chart';
+@import 'container';
+@import "image";
+@import "media";
+@import "navbar";
+@import "navs";
+@import "drawer/drawer";
+@import "type";
+@import "layout";
+@import "lessons";
+@import "list";
+@import "loaders";
+@import "progress";
+@import "map";
+@import "row";
+@import "snackbar";
+@import "table";
+@import "am-weather";
+
+a.demo-color {
+  width: 16px;
+  height:16px;
+  display: inline-block;
+  margin-right:5px;
+  border-radius: 3px;
+  color:#fff; fill:#fff;
+  line-height: 16px;
+  text-align: center;
+  border:1px solid transparent;
+  .material-icons {
+    display:none;
+  }
+  &.active {
+    box-shadow: 0 2px 4px rgba(0,0,0,.3);
+    color: #fff;
+    fill: #fff;
+    .material-icons {
+      display:block;
+      position: relative;
+      top: -1px;
+      font-size: 14px;
+    }
+  }
+  &:hover { text-decoration:none; }
+}
+.bg-primary, .bg-primary-dark {
+  a.demo-color { border:1px solid rgba(255,255,255, .24); }
+}
+
+@media print {
+  .mdk-drawer__content {
+    width: 0;
+  }
+  .mdk-drawer-layout__content {
+    transform: none !important;
+    margin-right: 0 !important;
+  }
+}

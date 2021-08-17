@@ -1,0 +1,11 @@
+line.am-weather-rain-1 {
+  fill: theme-color('link-color') !important;
+  stroke: theme-color('link-color') !important;
+}
+
+#rainy-2 {
+  path.am-weather-rain-1, path.am-weather-cloud {
+    fill: theme-color('link-color');
+    color: theme-color('link-color');
+  }
+}

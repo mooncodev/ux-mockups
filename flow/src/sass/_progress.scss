@@ -1,0 +1,17 @@
+.progress-mini {
+  height: $progress-height / 2;
+  font-size: $progress-font-size / 2;
+}
+.progress-bar {
+  font-weight: bold !important;
+}
+
+
+.table-hover tr:hover .progress {
+  background-color: #fff;
+}
+.table-dark {
+  .progress, .table-hover tr:hover .progress {
+    background-color: rgba(0,0,0,.2) !important;
+  }
+}

@@ -1,0 +1,86 @@
+---
+title: Flow
+slug: apps-clients
+category: apps
+navbarClass: 'navbar-dark bg-primary'
+---
+{% extends "./layouts/fluid-app.html" %}
+
+{% block scripts %}
+<div class="modal fade" id="newClientModal" tabindex="-1" role="dialog" aria-labelledby="newClientModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="newClientModalLabel">Add a new client</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label>First Name</label>
+            <input type="text" class="form-control" id="first_name" placeholder="First Name">
+          </div>
+          <div class="form-group col-md-6">
+            <label>Last Name</label>
+            <input type="text" class="form-control" id="last_name" placeholder="Last Name">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label>Email</label>
+            <input type="email" class="form-control" placeholder="Email">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="photo">Profile photo</label>
+            <label class="custom-file">
+              <input type="file" id="photo" class="custom-file-input">
+              <span class="custom-file-control"></span>
+            </label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="mb-2">Assign role</label>
+          <div class="custom-control custom-radio mb-1">
+            <input type="radio" id="roleRadio1" name="roleRadio" class="custom-control-input" disabled>
+            <label class="custom-control-label" for="roleRadio1">Administrator</label>
+          </div>
+          <div class="custom-control custom-radio mb-1">
+            <input type="radio" id="roleRadio2" name="roleRadio" class="custom-control-input">
+            <label class="custom-control-label" for="roleRadio2">Manager</label>
+          </div>
+          <div class="custom-control custom-radio mb-1">
+            <input type="radio" id="roleRadio3" name="roleRadio" class="custom-control-input">
+            <label class="custom-control-label" for="roleRadio3">Moderator</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input type="radio" id="roleRadio4" name="roleRadio" class="custom-control-input">
+            <label class="custom-control-label" for="roleRadio4">User</label>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          <i class="material-icons md-18 align-middle">close</i>
+          <span class="align-middle">Close</span>
+        </button>
+        <button type="button" class="btn btn-primary">
+          <i class="material-icons md-18 align-middle">add</i>
+          <span class="align-middle">Add</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="assets/vendor/select2.full.min.js"></script>
+
+<script>
+  $('.select2').select2({
+    theme: 'bootstrap',
+    placeholder: 'Select an option'
+  });
+</script>
+{% endblock %}

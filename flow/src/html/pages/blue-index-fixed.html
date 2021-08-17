@@ -1,0 +1,27 @@
+---
+title: Flow
+slug: index-fixed
+category: index
+theme: blue
+---
+{% extends "layouts/fixed.html" %}
+
+{% block head %}
+  <link type="text/css" href="assets/css/themes/{{ theme or 'default' }}/vendor-fullcalendar.css" rel="stylesheet">
+  <link type="text/css" href="assets/css/themes/{{ theme or 'default' }}/vendor-weathericons.css" rel="stylesheet">
+  <link type="text/css" href="assets/css/themes/{{ theme or 'default' }}/vendor-bootstrap-datepicker.css" rel="stylesheet">
+{% endblock %}
+
+{% block page %}
+  <div class="container">
+   {% include "_dashboard.html" %}
+  </div>
+{% endblock %}
+
+{% block scripts %}
+  <script src="assets/js/charts_index.js"></script>
+  <script src="assets/vendor/fullcalendar.min.js"></script>
+  <script src="assets/js/calendars.js"></script>
+  <script src="assets/vendor/bootstrap-datepicker.min.js"></script>
+  <script src="assets/js/datepicker.js"></script>
+{% endblock %}

@@ -1,0 +1,51 @@
+{%
+  set events = [
+  {
+    name: 'All day event',
+    date: 'Tue 9/12',
+    description: 'An all day event taking place...'
+  },
+  {
+    name: 'Long event',
+    date: 'Fri 9/15',
+    description: 'A long event will take place in...'
+  },
+  {
+    name: 'Repeating event',
+    times: '4:00 PM',
+    date: 'Wed 9/13',
+    description: "Repeating event from 4 o'clock..."
+  },
+  {
+    name: 'Meeting',
+    times: '10:30 AM',
+    date: 'Wed 9/13',
+    description: 'Morning meeting for planning...'
+  },
+  {
+    name: 'Birthday party',
+    times: '7:00 AM',
+    date: 'Wed 9/13',
+    description: 'Early party for our colleague...'
+  }
+  ]
+  %}
+
+  {% for event in events %}
+  <a href="#" class="list-group-item list-group-item-action">
+    <div class="media">
+      <div class="media-body">
+        <div class="float-right text-muted">{{ event.date }}</div>
+        <div class="mb-1">
+          <strong>{{ event.name }}</strong>
+          {% if event.times %}
+          <div>{{ event.times }}</div>
+          {% endif %}
+        </div>
+        <span class="text-muted">
+          {{ event.description }}
+        </span>
+      </div>
+    </div>
+  </a>
+  {% endfor %}

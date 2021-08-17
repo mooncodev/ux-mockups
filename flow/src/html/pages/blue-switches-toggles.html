@@ -1,0 +1,19 @@
+---
+title: Flow
+slug: switches-toggles
+category: forms
+theme: blue
+---
+{% extends "./layouts/default.html" %}
+
+{% block head %}
+  <link type="text/css" href="assets/css/themes/{{ theme or 'default' }}/vendor-bootstrap-switch.css" rel="stylesheet">
+{% endblock %}
+
+{% block scripts %}
+  <script src="assets/vendor/bootstrap-switch.min.js"></script>
+
+  <script>
+    $("input[name='bootstrap-switch']").bootstrapSwitch();
+  </script>
+{% endblock %}

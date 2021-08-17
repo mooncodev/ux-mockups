@@ -1,0 +1,31 @@
+---
+title: Flow
+slug: index
+category: index
+theme: green
+---
+{% extends "layouts/default.html" %}
+
+{% block head %}
+  <link type="text/css" href="assets/css/themes/{{ theme or 'default' }}/vendor-fullcalendar.css" rel="stylesheet">
+  <link type="text/css" href="assets/css/themes/{{ theme or 'default' }}/vendor-weathericons.css" rel="stylesheet">
+  <link type="text/css" href="assets/css/themes/{{ theme or 'default' }}/vendor-bootstrap-datepicker.css" rel="stylesheet">
+{% endblock %}
+
+{% block page %}
+  <div class="container-fluid">
+    {% include "_dashboard.html" %}
+  </div>
+{% endblock %}
+
+{% block scripts %}
+
+  {% include 'partials/modal.new-ticket.html' %}
+  {% include 'partials/modal.edit-event.html' %}
+  {% include 'partials/modal.new-collaborator.html' %}
+  {% include 'partials/modal.new-task.html' %}
+
+  <script src="assets/vendor/fullcalendar.min.js"></script>
+  <script src="assets/js/calendars.js"></script>
+  <script src="assets/js/charts_index.js"></script>
+{% endblock %}

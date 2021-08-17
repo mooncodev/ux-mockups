@@ -1,0 +1,49 @@
+<div class="modal fade" id="newTaskModal" tabindex="-1" role="dialog" aria-labelledby="newTaskModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="newTaskModalLabel">Add a new task</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <div class="form-group">
+            <label class="mr-1">Task Description</label>
+            <input type="text" class="form-control" name="task" id="modal-task" placeholder="Short description of the task">
+          </div>
+          <div class="form-group">
+            <label class="mr-1">Due Date</label>
+            <input type="text" class="form-control" name="end_date" id="end_date" placeholder="Due date">
+          </div>
+          <div class="form-group">
+            <label class="mr-1">Assigned User</label>
+            <select class="custom-select form-control">
+              <option selected>None</option>
+              <option value="1">Andrew Robles</option>
+              <option value="2">Tara Knows</option>
+              <option value="3">Mark Ups</option>
+              <option value="4">Steven Short</option>
+              <option value="5">Karen Smith</option>
+              <option value="6">John Smith</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="description" class="mr-1">Type</label>
+            <select class="custom-select form-control">
+              <option selected>None</option>
+              <option value="1">Request</option>
+              <option value="2">Bug</option>
+              <option value="3">Feature</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Add task</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+---
+title: Flow
+slug: text-editor
+category: forms
+---
+{% extends "./layouts/default.html" %}
+
+{% block head %}
+  <link type="text/css" href="assets/css/themes/{{ theme or 'default' }}/vendor-summernote.css" rel="stylesheet">
+{% endblock %}
+
+{% block page %}
+<div class="container-fluid">
+  <h2>Custom Text Editor</h2>
+  <p class="lead">
+    Professional WYSIWYG text editing tools.
+  </p>
+  <hr>
+  <div class="card">
+    <div class="card-header">
+      <h4 class="card-title">Text Editor</h4>
+    </div>
+    <div class="card-body">
+      <div class="text-editor">
+        Start editing text...
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+  <script src="assets/vendor/summernote-bs4.min.js"></script>
+
+  <script>
+    $('.text-editor').summernote({
+      height: '200',
+      disableResizeEditor: true
+    });
+  </script>
+{% endblock %}

@@ -1,0 +1,24 @@
+.media {
+  .media-body {
+    .chat-message {
+      border-radius: .25rem;
+      display: inline-flex;
+      margin-bottom: 0;
+      padding: .625rem;
+      &__in {
+        background: theme-color('light');
+      }
+      &__out {
+        background: theme-color('link-color');
+        color: #ffffff;
+      }
+    }
+  }
+
+  &.chat-head {
+    padding-bottom: 1.25rem;
+    margin-bottom: 1.25rem;
+    border-bottom: 1px solid theme-color('border-color');
+    align-items: center;
+  }
+}

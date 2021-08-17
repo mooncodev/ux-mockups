@@ -1,0 +1,81 @@
+<nav class="navbar navbar-expand-md {{ navbarClass if navbarClass else 'navbar-light' }} mdc-toolbar__row d-print-none">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <!-- SVG Logo -->
+
+      <svg width="24px" height="24px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMaxYMin meet">
+        <defs></defs>
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <path d="M3,-3.15936513e-15 L20,-2.74650094e-15 L20,-2.66453526e-15 C21.6568542,-2.96889791e-15 23,1.34314575 23,3 L23,20 L23,20 C23,21.6568542 21.6568542,23 20,23 L6,23 L3,23 L3,23 C1.34314575,23 1.09108455e-15,21.6568542 8.8817842e-16,20 L0,3 L0,3 C-2.02906125e-16,1.34314575 1.34314575,-3.24835102e-15 3,-3.55271368e-15 Z" id="logoBackground"></path>
+          <rect id="Rectangle-6" fill="#FFFFFF" x="1.0952381" y="12.0960631" width="9.96553315" height="9.76943696"></rect>
+          <rect id="Rectangle-6-Copy" fill="#FFFFFF" x="11.9533428" y="1.05597629" width="9.96553315" height="9.76943696"></rect>
+        </g>
+      </svg>
+      <!-- //End SVG Logo -->
+
+      <span class="navbar-brand-text">flow</span>
+      <small class="text-light">v.1</small>
+    </a>
+
+    <button class="navbar-toggler navbar-toggler-right" type="button">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav align-items-center flex-auto">
+        <li class="nav-item nav-link flex-auto">
+          <div class="form-group m-0">
+            <div class="input-group input-group--inline">
+              <div class="input-group-addon">
+                <i class="material-icons">search</i>
+              </div>
+              <input type="text" class="form-control" name="search">
+            </div>
+          </div>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+
+        <li class="nav-item dropdown notifications align-self-center">
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+            <i class="material-icons align-middle">notifications_active</i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="notificationsDropdown">
+            <div class="dropdown-header d-flex align-items-center">
+              <span>Notifications</span>
+              <a href="#" class="ml-auto">
+                <i class="material-icons align-middle md-18">close</i>
+              </a>
+            </div>
+            <div class="dropdown-item flex-column align-items-start">
+              <div class="w-100"><a href="#">themefy</a> received a new quote</div>
+              <div class="w-100 text-muted">4 secs ago</div>
+            </div>
+            <div class="dropdown-item flex-column align-items-start">
+              <div class="w-100"><a href="#">karen</a> received a new quote</div>
+              <div class="w-100 text-muted">25 mins ago</div>
+            </div>
+            <div class="dropdown-item flex-column align-items-start">
+              <div class="w-100"><a href="#">jim</a> received a new quote</div>
+              <div class="w-100 text-muted">7 hrs ago</div>
+            </div>
+            <div class="dropdown-item flex-column text-right">
+              <a href="#">View All <i class="material-icons md-18 align-middle">arrow_forward</i></a>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle dropdown-clear-caret" data-toggle="dropdown" aria-expanded="false">
+            My Dashboard <img src="assets/images/avatars/andrew-robles-300868.jpg" class="img-fluid rounded-circle ml-1" width="35" alt="">
+          </a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <a href="account.html" class="dropdown-item dropdown-item-action"><i class="material-icons md-18 align-middle mr-1">lock</i> <span class="align-middle">Account</span></a>
+            <a href="profile.html" class="dropdown-item dropdown-item-action"><i class="material-icons md-18 align-middle mr-1">account_circle</i> <span class="align-middle">Profile</span></a>
+            <a href="#" class="dropdown-item dropdown-item-action"><i class="material-icons md-18 align-middle mr-1">settings</i> <span class="align-middle">Settings</span></a>
+            <a href="login.html" class="dropdown-item dropdown-item-action"><i class="material-icons md-18 align-middle mr-1">exit_to_app</i> <span class="align-middle">Logout</span></a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

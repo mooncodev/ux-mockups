@@ -1,0 +1,17 @@
+---
+title: Flow
+slug: custom-forms
+category: forms
+---
+{% extends "./layouts/default.html" %}
+
+{% block scripts %}
+<script src="assets/vendor/select2.full.min.js"></script>
+
+<script>
+  $('.select-2').select2({
+    theme: 'bootstrap',
+    placeholder: 'Select an option'
+  });
+</script>
+{% endblock %}

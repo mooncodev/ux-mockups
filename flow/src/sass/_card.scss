@@ -1,0 +1,215 @@
+.card {
+  .card-header {
+    .card-title {
+      margin: 0;
+    }
+  }
+
+  box-shadow: 0 2px 4px 0 rgba(0,0,0, .12);
+  > a {
+    text-decoration: none;
+  }
+
+  .card-body.card-colors .card:not(:last-of-type) {
+    margin-bottom: 1.25rem;
+  }
+
+  .card-title {
+    font-size: $font-size-base + 0.10rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  &.card-social {
+    .card-body {
+      padding: 1.875rem;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      a {
+        color: #ffffff;
+        text-decoration: none;
+      }
+    }
+    &.card-facebook {
+      background: theme-color('facebook');
+      :hover {
+        background: lighten( theme-color('facebook'), 10% );
+        border-radius: 5px;
+      }
+    }
+    &.card-twitter {
+      background: theme-color('twitter');
+      :hover {
+        background: lighten( theme-color('twitter'), 10% );
+        border-radius: 5px;
+      }
+    }
+    &.card-instagram {
+      background: theme-color('instagram');
+      :hover {
+        background: lighten( theme-color('instagram'), 10% );
+        border-radius: 5px;
+      }
+    }
+    &.card-dribbble {
+      background: theme-color('dribbble');
+      :hover {
+        background: lighten( theme-color('dribbble'), 10% );
+        border-radius: 5px;
+      }
+    }
+  }
+
+  &.card-unstyled {
+    .card-header {
+      border: 0;
+    }
+    background: none;
+    border: 0;
+    box-shadow: none;
+  }
+
+  &.card-goal {
+    text-align: center;
+    padding: 1.25rem;
+    border: 0;
+    &:not(:first-of-type):not(:last-of-type) {
+      border-left: 1px solid #E2E8EE !important;
+      border-right: 1px solid #E2E8EE !important;
+    }
+  }
+
+  &.card-pricing {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    z-index: 1;
+    box-shadow: 0px 0px 10px rgba(0,0,0, .24);
+  }
+
+  &.card-task {
+    padding: 1.25rem;
+    .d-hover {
+      opacity: 0;
+    }
+    &:hover {
+      cursor: pointer;
+      &:not(.card-active) {
+        background: theme-color('body-bg');
+        .d-hover {
+          opacity: 1;
+          transition: .5s;
+        }
+      }
+    }
+  }
+
+  &.card-active {
+    background: theme-color('primary');
+    color: #ffffff;
+
+    a {
+      color: #efefef;
+    }
+  }
+
+  &.card-checkout {
+    .card-body {
+      &.checked {
+        background: theme-color('body-bg');
+      }
+    }
+  }
+}
+
+
+.container, .container-fluid {
+  > .tab-content , & > .row > div[class^="col"] > .card {
+    margin-bottom: $grid-gutter-width;
+  }
+  > .tab-content , > .tab-content > .tab-pane > .row > div[class^="col"] > .card, & > .row > div[class^="col"] > .card {
+    border: 0;
+  }
+}
+.mdk-drawer-layout__content {
+  .container > .card, .container-fluid > .card, .container-fluid > .card-group, .container-fluid > .page-section {
+    margin-bottom: $grid-gutter-width;
+  }
+}
+
+.card > .card-group > .card {
+  box-shadow: none;
+  border-color: $border-color;
+  border-radius:0;
+  &:first-child { border-left: 0; }
+  &:last-child { border-right: 0; }
+
+  @include media-breakpoint-down(sm) {
+    margin:0;
+  }
+}
+
+.card {
+  &.card-login, &.card-signup, &.card-forgot-password {
+    width: 50%;
+  }
+  &.card-profile {
+    .row .col-lg-6 {
+      .badge {
+        &:not(:last-of-type) {
+          margin-bottom: .3125rem;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .card {
+    &.card-sales .card-title {
+      margin-bottom: .75rem;
+    }
+    &.card-earnings .card-title {
+      margin-bottom: .75rem;
+    }
+
+    &.card-login, &.card-signup, &.card-forgot-password {
+      width: 75%;
+    }
+
+    &.card-account {
+      .form-group.form-row {
+        .col-lg-6 {
+          &:not(:last-of-type) {
+            margin-bottom: 1rem;
+          }
+        }
+        .col-lg-8 {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+
+    &.card-colors {
+      .row {
+        .col-lg-6 {
+          &:not(:last-of-type) {
+            margin-bottom: 1.25rem;
+          }
+        }
+      }
+    }
+
+    &.card-blog-posts {
+      .row {
+        .col-lg-6 {
+          &:not(:last-of-type) {
+            margin-bottom: 1.25rem;
+          }
+        }
+      }
+    }
+  }
+}

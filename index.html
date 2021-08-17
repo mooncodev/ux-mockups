@@ -1,0 +1,87 @@
+<html lang="en">
+<head>
+	<title>UX Examples</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="MoonCo">
+	<style>
+		html, body { margin: 0;padding: 0;width: 100%; /*height: 100vh;*/display:
+				flex;flex-direction: row;justify-content: center;align-items:flex-start;
+			background: #000000;}
+		body {
+			/*background-image: url(assets/frogepat_black_embossdarkblock.png);*/
+			/*background-repeat: repeat;*/
+		}
+		a{
+			display:block;
+			padding-top: 4px;
+			font-size:20px;
+			color:lightgrey;
+			text-decoration: none;
+			text-underline: none;
+			border-radius: 7px;
+			margin:3px;
+			width:150px;
+			height:28px;
+			border:1px solid rebeccapurple;
+			text-align: center;
+			font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+		}
+		a:visited{
+			color:grey;
+			border-color:dimgrey;
+		}
+		a:hover{
+			color:white;
+			border-color:white;
+			background-color: mediumpurple;
+		}
+
+	</style>
+	<link rel="stylesheet" href="assets/reset.css">
+</head>
+<body>
+<div id="frogelinks-container">
+	<h1 id="heading">UX Examples</h1>
+
+	<a href="./cryptum">cryptum</a>
+	<a href="./dashtrans">dashtrans</a>
+	<a href="./flat/dist">flat</a>
+	<a href="./flow/dist">flow</a>
+	<a href="./goofy/html/full-width-dark">goofy</a>
+	<a href="huma/dist/index.html">huma</a>
+	<a href="./oneadmin">oneadmin</a>
+	<a href="./syndron">syndron</a>
+</div>
+<script>
+let scratch = `
+#cryptum
+* gulp serve/build
+* barebones UI
+#dashtrans
++PRO dk-grey color scheme
+* no build!
+-CON hover on compact sidebar
+#flat
++PRO good simple responsive base
+-CON theme-mix frontendmatter webpack dependency
+#flow
+-sidebar does not hide
+-no dark theme
+#goofy
+-CON hover on compact sidebar
+-CON needs compact sidebar
+-PRO good dark theme
+* no build!
+#huma
+#oneadmin
++minimal mod needed to target state
+#syndron
+
+`;
+</script>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+#calendar {
+  .fc-toolbar {
+    padding: 1.25rem;
+    .fc-month-button {
+      z-index: 0;
+    }
+  }
+  .fc-view-container {
+    margin-bottom: 0;
+  }
+}

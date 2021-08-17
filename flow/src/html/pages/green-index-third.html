@@ -1,0 +1,130 @@
+---
+title: Flow
+slug: index-third
+category: index
+navbarClass: 'navbar-dark bg-primary'
+theme: green
+---
+{% extends "layouts/default.html" %}
+
+{% block head %}
+<link type="text/css" href="assets/css/themes/{{ theme or 'default' }}/vendor-morris.css" rel="stylesheet">
+{% endblock %}
+
+{% block page %}
+<div class="container-fluid">
+  {% include "_dashboard-third.html" %}
+</div>
+{% endblock %}
+
+{% block scripts %}
+
+<script src="assets/vendor/Chart.min.js"></script>
+<script src="assets/vendor/morris.min.js"></script>
+<script src="assets/vendor/raphael.min.js"></script>
+
+<script>
+  new Chart($("#members-chart")[0].getContext('2d'), {
+    type: 'bar',
+    data: {
+      labels:
+      [
+      "01", "02", "03", "04",
+      "05", "06", "07", "08",
+      "09", "10", "11", "12"
+      ],
+      datasets: [
+      {
+        label: 'Registrations',
+        data: [41, 22, 7, 13, 49, 12, 25, 33, 18, 11, 9, 21],
+        borderWidth: 5,
+        borderColor: colors.color_primary,
+        backgroundColor: colors.color_primary,
+      },
+      {
+        label: 'Sales',
+        data: [112, 412, 42, 52, 140, 78, 97, 47, 99, 82, 28,33],
+        borderWidth: 5,
+        borderColor: colors.color_success,
+        backgroundColor: colors.color_success,
+      }
+      ]
+    },
+    options: {
+      maintainAspectRatio: false,
+      legend: {
+        display: false,
+        labels: {
+          display: false
+        }
+      },
+      scales: {
+        yAxes: [{
+          stacked: false,
+          gridLines: {
+            color: colors.border_color,
+            zeroLineColor: colors.border_color,
+          },
+          ticks: {
+           callback: function(value, index, values) {
+            if(parseInt(value) >= 1000){
+              return '$' + value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            } else {
+              return '$' + value;
+            }
+          }
+        }
+      }],
+      xAxes : [ {
+        gridLines : {
+          display : false
+        }
+      } ]
+    }
+  }
+});
+
+  new Morris.Donut({
+    element: 'goals-chart',
+    data: [
+    { label: 'Completed', value: 72 },
+    { label: 'In progress', value: 28 }
+    ],
+    resize: true,
+    colors: [colors.color_primary, colors.color_bg]
+  });
+
+  $('.doughnut-chart').each((index, element) => {
+    let ctx = element.getContext('2d')
+    let value1 = element.dataset.percent
+    let value2 = 100 - value1
+    let pie_color = ''
+
+    switch(true) {
+      case value1 <= 25:
+      pie_color = colors.color_danger
+      break;
+      case value1 <= 50:
+      pie_color = colors.color_warning
+      break;
+      default:
+      pie_color = colors.color_success
+    }
+
+    new Chart(ctx, {
+      type: 'pie',
+      data: {
+        datasets: [{
+          data: [value1, value2],
+          borderWidth: 1,
+          backgroundColor: [pie_color, colors.color_bg]
+        }]
+      },
+      options: {
+        tooltips: { enabled: false },
+        cutoutPercentage: 85
+      }
+    })
+  });
+</script>
+{% endblock %}

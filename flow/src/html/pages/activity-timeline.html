@@ -1,0 +1,15 @@
+---
+title: Flow
+slug: activity-timeline
+category: pages
+---
+{% extends "./layouts/default.html" %}
+
+{% block head %}
+  <link type="text/css" href="assets/css/themes/{{ theme or 'default' }}/vendor-bootstrap-datepicker.css" rel="stylesheet">
+{% endblock %}
+
+{% block scripts %}
+  <script src="assets/vendor/bootstrap-datepicker.min.js"></script>
+  <script src="assets/js/datepicker.js"></script>
+{% endblock %}

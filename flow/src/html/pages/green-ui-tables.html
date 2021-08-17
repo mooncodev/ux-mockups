@@ -1,0 +1,20 @@
+---
+title: Flow
+slug: ui-tables
+category: ui
+theme: green
+---
+{% extends "./layouts/default.html" %}
+
+{% block head %}
+<link type="text/css" href="assets/css/themes/{{ theme or 'default' }}/vendor-bootstrap-datatables.css" rel="stylesheet">
+{% endblock %}
+
+{% block scripts %}
+<script src="assets/vendor/jquery.dataTables.js"></script>
+<script src="assets/vendor/dataTables.bootstrap4.js"></script>
+
+<script>
+  $('#data-table').dataTable();
+</script>
+{% endblock %}
